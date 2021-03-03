@@ -1,0 +1,65 @@
+{
+    "basic_string": {
+        "string1": "this is a basic sentence",
+        "string2": "this is another sentence",
+        "expected_common": ["this", "is", "sentence"],
+        "expected_difference": ["a", "basic", "another"]
+    },
+
+    "both_empty_strings": {
+        "string1": "",
+        "string2": "",
+        "expected_common": [],
+        "expected_difference": []
+    },
+
+    "one_empty_string": {
+        "string1": "this is a basic sentence",
+        "string2": "",
+        "expected_common": [],
+        "expected_difference": ["this", "is", "a", "basic", "sentence"]
+    },
+
+    "identical_string_with_punctuation": {
+        "string1": "this is a basic sentence",
+        "string2": "this, is! a. basic; sentence'",
+        "expected_common": ["this", "is", "a", "basic", "sentence"],
+        "expected_difference": []
+    },
+
+    "capitalization_strings": {
+        "string1": "this is a basic sentence",
+        "string2": "THIS IS ANOTHER SENTENCE",
+        "expected_common": ["this", "is", "sentence"],
+        "expected_difference": ["a", "basic", "another"]
+    },
+
+    "camelcase_string": {
+        "string1": "this Is a Basic sentence",
+        "string2": "This is Another sentence",
+        "expected_common": ["this", "is", "sentence"],
+        "expected_difference": ["a", "basic", "another"]
+    },
+
+    "punctuation_different_strings": {
+        "string1": "this is a basic sentence",
+        "string2": "this!! is another sentence....",
+        "expected_common": ["this", "is", "sentence"],
+        "expected_difference": ["a", "basic", "another"]
+    },
+
+    "numbers_in_strings": {
+        "string1": "thi2s is a 1 basic sentence",
+        "string2": "thi1s is another sentence.",
+        "expected_common": ["is", "sentence"],
+        "expected_difference": ["thi2s", "thi1s", "a", "basic", "another", "1"]
+    },
+
+    "extra_spaces_in_strings": {
+        "string1": "this is a     basic sentence",
+        "string2": "this is another sentence    ",
+        "expected_common": ["this", "is", "sentence"],
+        "expected_difference": ["a", "basic", "another"]
+    }
+
+}
